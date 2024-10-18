@@ -2,8 +2,8 @@ name: Playwright Tests
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+schedule:
+    - cron: '0 0 * * 1'  # Se ejecuta a las 00:00 una vez a la semana
 jobs:
   test:
     timeout-minutes: 60
